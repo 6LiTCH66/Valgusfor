@@ -1,0 +1,74 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.mainDiv{
+    background-color: white;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    font-size: 0;
+    
+}
+
+.mainDiv > div {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+    
+}
+.red{
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    animation-name: re;
+    animation-duration: 2s;
+
+
+}
+.yellow{
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+    animation-name: yel;
+    transition-property: transform;
+    transition-duration: 3s;
+
+    
+}
+
+.green{
+    background-color: green;
+    border-radius: 50%;
+    opacity: 0;
+    animation-name: gre;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes gre{
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes re{
+    0%{
+        top: -75px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+
+.yellow:hover{
+    transform: rotateY(180deg)
+}
